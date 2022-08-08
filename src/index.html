@@ -7,6 +7,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="./assets/assets-login/favicon.ico">
 
+  <!-- home -->
+   <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="./appimg/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appcss/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appcss/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appcss/owl.carousel.css">
+    <link rel="stylesheet" href="./appcss/owl.theme.css">
+    <link rel="stylesheet" href="./appcss/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appcss/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appcss/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appcss/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appcss/main.css">
+    <!-- educate icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appcss/educate-custon-icon.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appcss/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appcss/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appcss/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="./appcss/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appcss/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="./appcss/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appstyle.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="./appcss/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="./appjs/vendor/modernizr-2.8.3.min.js"></script>
+
+<!-- home -->
+
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/assets-dash/img/apple-icon.png">
+<link rel="icon" type="image/png" href="./assets/assets-dash/img/favicon.png">
+<title>
+  Argon Dashboard 2 by Creative Tim
+</title>
+<!--     Fonts and icons     -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+<!-- Nucleo Icons -->
+<link href="./assets/assets-dash/css/nucleo-icons.css" rel="stylesheet" />
+<link href="./assets/assets-dash/css/nucleo-svg.css" rel="stylesheet" />
+<!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+<!-- CSS Files -->
+<link id="pagestyle" href="./assets/assets-dash/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  <!-- home  -->
+
   <!-- login -->
   <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="./assets/assets-login/images/icons/favicon.ico"/>
@@ -36,6 +112,113 @@
 <body>
   <app-root></app-root>
 <!-- vendor login -->
+
+<!-- home -->
+
+ <!--   Core JS Files   -->
+ <script src="./assets/assets-dash/js/core/popper.min.js"></script>
+ <script src="./assets/assets-dash/js/core/bootstrap.min.js"></script>
+ <script src="./assets/assets-dash/js/plugins/perfect-scrollbar.min.js"></script>
+ <script src="./assets/assets-dash/js/plugins/smooth-scrollbar.min.js"></script>
+ <script src="./assets/assets-dash/js/plugins/chartjs.min.js"></script>
+ <script>
+   var ctx1 = document.getElementById("chart-line").getContext("2d");
+
+   var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
+
+   gradientStroke1.addColorStop(1, 'rgba(94, 114, 228, 0.2)');
+   gradientStroke1.addColorStop(0.2, 'rgba(94, 114, 228, 0.0)');
+   gradientStroke1.addColorStop(0, 'rgba(94, 114, 228, 0)');
+   new Chart(ctx1, {
+     type: "line",
+     data: {
+       labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+       datasets: [{
+         label: "Mobile apps",
+         tension: 0.4,
+         borderWidth: 0,
+         pointRadius: 0,
+         borderColor: "#5e72e4",
+         backgroundColor: gradientStroke1,
+         borderWidth: 3,
+         fill: true,
+         data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+         maxBarThickness: 6
+
+       }],
+     },
+     options: {
+       responsive: true,
+       maintainAspectRatio: false,
+       plugins: {
+         legend: {
+           display: false,
+         }
+       },
+       interaction: {
+         intersect: false,
+         mode: 'index',
+       },
+       scales: {
+         y: {
+           grid: {
+             drawBorder: false,
+             display: true,
+             drawOnChartArea: true,
+             drawTicks: false,
+             borderDash: [5, 5]
+           },
+           ticks: {
+             display: true,
+             padding: 10,
+             color: '#fbfbfb',
+             font: {
+               size: 11,
+               family: "Open Sans",
+               style: 'normal',
+               lineHeight: 2
+             },
+           }
+         },
+         x: {
+           grid: {
+             drawBorder: false,
+             display: false,
+             drawOnChartArea: false,
+             drawTicks: false,
+             borderDash: [5, 5]
+           },
+           ticks: {
+             display: true,
+             color: '#ccc',
+             padding: 20,
+             font: {
+               size: 11,
+               family: "Open Sans",
+               style: 'normal',
+               lineHeight: 2
+             },
+           }
+         },
+       },
+     },
+   });
+ </script>
+ <script>
+   var win = navigator.platform.indexOf('Win') > -1;
+   if (win && document.querySelector('#sidenav-scrollbar')) {
+     var options = {
+       damping: '0.5'
+     }
+     Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+   }
+ </script>
+ <!-- Github buttons -->
+ <script async defer src="https://buttons.github.io/buttons.js"></script>
+ <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+ <script src="./assets/assets-dash/js/argon-dashboard.min.js?v=2.0.4"></script>
+
+<!-- home -->
 	
 <!--===============================================================================================-->
 <script src="./assets/assets-login/vendor/jquery/jquery-3.2.1.min.js"></script>

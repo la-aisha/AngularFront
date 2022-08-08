@@ -28,22 +28,24 @@ form : FormGroup;
     this.Http.post('http://127.0.0.1:8000/api/login_check',this.form.getRawValue(), {
       responseType: 'text'}).subscribe(
         res => {
-          console.log(res); })
+          console.log(res); 
 
 
 
-         /*  if (res.status == 200) {
-            this.router.navigate(['/'])
-          }
-          else {
-            alert(res.status)
-          }
-        },
-        err => alert(err)
-      );
-    */
-    }
+            if (res) {
+             this.router.navigate(['/home'])
+             localStorage.setItem('token',res)
+           }
+           else {
+             alert(res)
+           }
+         },
+         err => alert(err)
+       );
     
+    
+  
+}
 
   
 
