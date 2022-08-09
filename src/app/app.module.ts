@@ -18,6 +18,7 @@ import { HeaderComponent } from './pages/header/header.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { AsideComponent } from './pages/aside/aside.component';
+import { CardComponent } from './pages/card/card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { AsideComponent } from './pages/aside/aside.component';
     FooterComponent,
     NavbarComponent,
     CategorieComponent,
-    AsideComponent
+    AsideComponent,
+    CardComponent
     
   ],
   imports: [
